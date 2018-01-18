@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Bobby Bryant",
+      "authorEmail": "bobby@developwithwp.com",
+      "authorUrl": ""
+    }
+  }
+}
