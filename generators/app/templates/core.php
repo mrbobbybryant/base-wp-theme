@@ -31,7 +31,7 @@ function scripts() {
 		'<%= projectName %>-js',
 		get_stylesheet_directory_uri() . '/dist/frontend.bundle.js',
 		array(),
-		%= namespace.toUpperCase() %>_VERSION,
+		<%= namespace.toUpperCase() %>_VERSION,
 		true
 	);
 
@@ -39,7 +39,7 @@ function scripts() {
 		'<%= projectName %>-css',
 		get_stylesheet_directory_uri() . '/dist/frontend.bundle.css',
 		array(),
-		%= namespace.toUpperCase() %>_VERSION
+		<%= namespace.toUpperCase() %>_VERSION
 	);
 
 	wp_localize_script(
@@ -78,9 +78,9 @@ function i18n() {
 function admin_scripts() {
 	wp_enqueue_script(
 		'<%= projectName %>-admin',
-		%= namespace.toUpperCase() %>_TEMPLATE_URL . '/dist/admin.bundle.js',
+		<%= namespace.toUpperCase() %>_TEMPLATE_URL . '/dist/admin.bundle.js',
 		array(),
-		%= namespace.toUpperCase() %>_VERSION,
+		<%= namespace.toUpperCase() %>_VERSION,
 		true
 	);
 

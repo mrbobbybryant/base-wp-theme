@@ -1,7 +1,5 @@
 'use strict';
 const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
 
 module.exports = class extends Generator {
   prompting() {
@@ -78,23 +76,15 @@ module.exports = class extends Generator {
       }
     );
 
-    this.fs.copyTpl(
-      this.templatePath('style.css'),
-      this.destinationPath('style.css'),
-      {
-        namespace: this.props.namespace,
-        projectName: this.props.projectName
-      }
-    );
+    this.fs.copyTpl(this.templatePath('style.css'), this.destinationPath('style.css'), {
+      namespace: this.props.namespace,
+      projectName: this.props.projectName
+    });
 
-    this.fs.copyTpl(
-      this.templatePath('index.php'),
-      this.destinationPath('index.php'),
-      {
-        namespace: this.props.namespace,
-        projectName: this.props.projectName
-      }
-    );
+    this.fs.copyTpl(this.templatePath('index.php'), this.destinationPath('index.php'), {
+      namespace: this.props.namespace,
+      projectName: this.props.projectName
+    });
 
     this.fs.copyTpl(
       this.templatePath('helpers.php'),
@@ -130,20 +120,11 @@ module.exports = class extends Generator {
       this.destinationPath('assets/css/index.css')
     );
 
-    this.fs.copy(
-      this.templatePath('header.php'),
-      this.destinationPath('header.php')
-    );
+    this.fs.copy(this.templatePath('header.php'), this.destinationPath('header.php'));
 
-    this.fs.copy(
-      this.templatePath('footer.php'),
-      this.destinationPath('footer.php')
-    );
+    this.fs.copy(this.templatePath('footer.php'), this.destinationPath('footer.php'));
 
-    this.fs.copy(
-      this.templatePath('.gitignore'),
-      this.destinationPath('.gitignore')
-    );
+    this.fs.copy(this.templatePath('.gitignore'), this.destinationPath('.gitignore'));
   }
 
   install() {
