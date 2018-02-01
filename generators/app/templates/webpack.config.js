@@ -7,11 +7,11 @@ const config = (module.exports = {
   context: path.resolve(__dirname, './assets/js/src'),
   entry: {
     admin: './admin/index.js',
-    frontend: './frontend/index.js'
+    frontend: './frontend/index.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
@@ -19,8 +19,14 @@ const config = (module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         loader: ExtractTextPlugin.extract({
-          loader: 'css-loader?importLoaders=1!postcss-loader'
-        })
+          loader: 'css-loader?importLoaders=1!postcss-loader',
+        }),
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
       },
       {
         test: /\.js$/,
@@ -32,38 +38,37 @@ const config = (module.exports = {
               'env',
               {
                 targets: {
-                  browsers: ['last 2 versions']
-                }
-              }
+                  browsers: ['last 2 versions'],
+                },
+              },
             ],
-            'react'
           ],
           plugins: [
             'transform-runtime',
             'transform-class-properties',
-            'transform-object-rest-spread'
-          ]
-        }
+            'transform-object-rest-spread',
+          ],
+        },
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
+        loader: 'url-loader?limit=10000&mimetype=image/svg+xml',
       },
       {
         test: /\.(eot|svg|ttf|WOFF|woff2)$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
-      }
-    ]
+        loader: 'file-loader?name=fonts/[name].[ext]',
+      },
+    ],
   },
   devtool: 'source-map',
   plugins: [
     new ExtractTextPlugin({
       filename: '[name].bundle.css',
       disable: false,
-      allChunks: true
-    })
-  ]
+      allChunks: true,
+    }),
+  ],
 });
 
 if ('production' === NODE_ENV) {
@@ -75,15 +80,15 @@ if ('production' === NODE_ENV) {
         pure_getters: true,
         unsafe: true,
         unsafe_comps: true,
-        screw_ie8: true
+        screw_ie8: true,
       },
       output: {
-        comments: false
+        comments: false,
       },
-      exclude: [/\.min\.js$/gi] // skip pre-minified libs
+      exclude: [/\.min\.js$/gi], // skip pre-minified libs
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"'
-    })
+      'process.env.NODE_ENV': '"production"',
+    }),
   );
 }

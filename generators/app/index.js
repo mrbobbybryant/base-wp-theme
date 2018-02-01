@@ -125,6 +125,8 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath('footer.php'), this.destinationPath('footer.php'));
 
     this.fs.copy(this.templatePath('.gitignore'), this.destinationPath('.gitignore'));
+
+    this.fs.copy(this.templatePath('.eslintrc.js'), this.destinationPath('.eslintrc.js'));
   }
 
   install() {

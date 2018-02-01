@@ -1,48 +1,53 @@
 {
-    "name": "<%= projectName %>",
-    "title": "<%= namespace %>",
-    "description": "The Best place to learn WordPress Development",
-    "version": "0.1.0",
-    "homepage": "http://wordpress.org/plugins",
-    "scripts": {
-      "start": "webpack --config webpack.config.js",
-      "watch": "webpack --progress --colors --watch",
-      "build": "NODE_ENV=production webpack --progress --colors"
-    },
-    "repository": {
-      "type": "git",
-      "url": ""
-    },
-    "author": {
-      "name": "Crossfield",
-      "email": "bobby@crossfield.com",
-      "url": "http://crossfield.com"
-    },
-    "devDependencies": {
-      "babel-core": "^6.22.1",
-      "babel-loader": "^6.2.10",
-      "babel-plugin-transform-class-properties": "^6.24.1",
-      "babel-plugin-transform-object-rest-spread": "^6.26.0",
-      "babel-preset-env": "^1.6.1",
-      "css-loader": "^0.26.1",
-      "extract-text-webpack-plugin": "2.0.0-beta.4",
-      "file-loader": "^0.9.0",
-      "postcss": "^5.2.11",
-      "postcss-cssnext": "^2.9.0",
-      "postcss-import": "^9.1.0",
-      "postcss-loader": "^1.2.2",
-      "webpack": "3.10.0"
-    },
-    "keywords": [],
-    "dependencies": {
-      "autoprefixer": "^6.7.7",
-      "babel-plugin-transform-runtime": "^6.23.0",
-      "babel-polyfill": "^6.26.0",
-      "babel-runtime": "^6.23.0",
-      "compression-webpack-plugin": "^0.4.0",
-      "normalize.css": "^5.0.0",
-      "postcss-nested": "^1.0.0",
-      "url-loader": "^0.5.8",
-      "whatwg-fetch": "^2.0.3"
-    }
+  "name": "<%= projectName %>",
+  "title": "<%= namespace %>",
+  "description": "The Best place to learn WordPress Development",
+  "version": "0.1.0",
+  "homepage": "http://wordpress.org/plugins",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "watch": "webpack --progress --colors --watch",
+    "build": "NODE_ENV=production webpack --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": {
+    "name": "Crossfield",
+    "email": "bobby@crossfield.com",
+    "url": "http://crossfield.com"
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "^0.9.0",
+    "postcss": "^5.2.11",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.2.2",
+    "webpack": "3.10.0",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-loader": "^1.9.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.23.0",
+    "compression-webpack-plugin": "^0.4.0",
+    "normalize.css": "^5.0.0",
+    "postcss-nested": "^1.0.0",
+    "url-loader": "^0.5.8",
+    "whatwg-fetch": "^2.0.3"
   }
+}
